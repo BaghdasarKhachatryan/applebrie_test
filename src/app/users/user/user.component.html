@@ -1,0 +1,14 @@
+<div class="user-container" *ngIf="posts && posts.length; else noPosts">
+  <h1>{{ user.name }}'s posts are</h1>
+  <mat-card class="card" *ngFor="let post of posts">
+    <mat-card-title
+      ><strong>{{ post.id }}.</strong>{{ post.title }}</mat-card-title
+    >
+
+    <mat-card-content>
+      <p>{{ post.body }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #noPosts> No post found</ng-template>

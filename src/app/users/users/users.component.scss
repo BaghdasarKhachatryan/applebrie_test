@@ -1,0 +1,31 @@
+@import "colors";
+@import "responsive";
+
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 5px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .user {
+    flex: 30%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $blue;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 5px 5px 5px $gray;
+    @include mobile {
+      flex: 100%;
+    }
+    cursor: pointer;
+    h2 {
+      color: $red;
+    }
+  }
+}

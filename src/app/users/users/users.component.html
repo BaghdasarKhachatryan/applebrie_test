@@ -1,0 +1,13 @@
+<h1 style="text-align: center">Users list</h1>
+<div class="users-container" *ngIf="users.length; else noUsers">
+  <div class="user" *ngFor="let user of users" (click)="navigateById(user)">
+    <h2>{{ user.name }}</h2>
+    <h3><strong>Email</strong>:{{ user.email }}</h3>
+    <p><strong>Company:</strong> {{ user.company.name }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+  </div>
+</div>
+
+<ng-template #noUsers>
+  <h3>No users found!</h3>
+</ng-template>
